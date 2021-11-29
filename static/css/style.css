@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+thead {
+  border: 1px solid black;
+  padding: 10px;
+  color: blue;
+}
+
+tr,
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+label {
+  background-color: white;
+  padding: 10px;
+  display: block;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
+button {
+  padding: 10px;
+  color: blue;
+  border-radius: 10px;
+  width: 150px;
+}
+button:hover {
+  background-color: honeydew;
+}
+input {
+  margin-bottom: 5px;
+}
+form {
+  margin-top: 20px;
+  margin-left: 20px;
+
+  width: 150px;
+}
+
+.tablebutdel {
+  padding: 10px;
+  color: red;
+  border-radius: 10px;
+  width: 150px;
+  font-weight: bold;
+  border-color: red;
+}
+
+.tablebuted {
+  padding: 10px;
+  color: blue;
+  border-radius: 10px;
+  width: 150px;
+  font-weight: bold;
+  border-color: blue;
+}
+
+.tablebutup {
+  padding: 10px;
+  color: green;
+  border-radius: 10px;
+  width: 150px;
+  font-weight: bold;
+  border-color: greenyellow;
+}
+
+.tablebutup:hover {
+  background-color: honeydew;
+}
+
+.tablebuted:hover {
+  background-color: rgb(194, 194, 235);
+}
+
+.tablebutdel:hover {
+  background-color: rgb(236, 172, 172);
+}
+
+.submit:hover {
+  background-color: rgb(173, 172, 172);
+}

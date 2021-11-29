@@ -1,0 +1,87 @@
+<h1>T: zapis/odczyt danych w bazie NeDB</h1>
+
+<form action="/handleForm" method="GET">
+  <label><input type="checkbox" name="ch1" /> ubezpiecznony</label>
+  <label><input type="checkbox" name="ch2" /> benzyna</label>
+  <label><input type="checkbox" name="ch3" /> uszkodzony</label>
+  <label><input type="checkbox" name="ch4" /> naped4x4</label>
+  <button type="submit" class="submit">DODAJ DO BAZY</button>
+
+</form>
+
+<form action="/">
+  <table>
+    <thead>
+      <tr>
+        <td></td>
+        <td>ubezpiecznony</td>
+        <td>benzyna</td>
+        <td>uszkodzony</td>
+        <td>naped4x4</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each data}}
+        <tr>
+          <td>{{@index}}</td>
+          {{#if (editHelp _id)}}
+          <td>
+            <select name="editedA" id="">
+              {{#each ../options}}
+              <option value="{{.}}">{{.}}</option>
+              {{/each}}
+            </select>
+          </td> 
+
+          <td>
+            <select name="editedB" id="">
+              {{#each ../options}}
+              <option value="{{.}}">{{.}}</option>
+              {{/each}}
+            </select>
+          </td>   
+
+          <td>
+            <select name="editedC" id="">
+              {{#each ../options}}
+              <option value="{{.}}">{{.}}</option>
+              {{/each}}
+            </select>
+          </td>  
+
+          <td>
+            <select name="editedD" id="">
+              {{#each ../options}}
+              <option value="{{.}}">{{.}}</option>
+              {{/each}}
+            </select>
+          </td>  
+          <td><button formaction="/update" value={{_id}} name="updateR" class="tablebutup">Update</button></td>
+          <td><button formaction="/cancel" class="tablebuted">Cancel</button></td>
+          {{else}}          
+            <td>{{a}}</td>
+            <td>{{b}}</td>
+            <td>{{c}}</td>
+            <td>{{d}}</td>
+            <td><button
+                class="tablebutdel"
+                formaction="/delete"
+                value={{_id}}
+                name="deleteR"
+                onclick='return confirm("Usunąć?")'
+              >DELETE</button></td>
+            <td><button
+                class="tablebuted"
+                formaction="/edit"
+                value={{_id}}
+                name="editR"
+              >EDIT</button></td>
+            {{/if}}
+        </tr>
+      {{/each}}
+    </tbody>
+
+  </table>
+</form>
